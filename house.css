@@ -1,0 +1,92 @@
+.house {
+    height: 250px;
+    width: 250px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.upBar {
+    font-family: 'Titillium Web', sans-serif;
+    /* justify-content: space-between; */
+    /* display: flex; */
+    margin: auto 0;
+    height: 50px;
+    width: 100%;
+    background-color: #383A3A;
+}
+
+.a {
+    z-index: 1000;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+    position: relative;
+    background-color: #383A3A;
+}
+
+.ul {
+    vertical-align: middle;
+    display: inline-block;
+    align-items: center;
+}
+
+.ul li {
+    display: inline-block;
+}
+
+.ul li:hover nav {
+    transform: translateY(0%);
+}
+
+.phone {
+    height: 50px;
+    width: 50px;
+}
+
+.a:hover {
+    color: black;
+    background-color: white;
+}
+
+.menuRight {
+    float: right;
+}
+
+.call {
+    font-family: 'Titillium Web', sans-serif;
+    padding: 0 20px;
+    color: white;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.phone {
+    vertical-align: middle;
+    filter: invert(100%);
+}
+
+.number {
+    vertical-align: middle;
+    color: white;
+    display: inline-block;
+}
+
+.nav {
+    transition: 0.5s;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+.nav a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: block;
+}

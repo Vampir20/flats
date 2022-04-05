@@ -7,6 +7,15 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
+.modal {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.500);
+    backdrop-filter: blur(2px);
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -174,7 +183,7 @@ body {
 }
 
 .slide h2 {
-    font-family: 'Palette Mosaic', cursive;
+    font-family: 'Rock 3D', cursive;
     /* text-align: center; */
     -webkit-text-shadow: 10px 5px 13px 7px rgba(0, 0, 0, 0.68);
     text-shadow: 10px 5px 13px rgba(0, 0, 0, 0.68);
@@ -437,9 +446,6 @@ footer a:hover {
         font-size: 14px;
         text-align: center;
     }
-    .menuRight {
-        display: none;
-    }
     .upBar {
         z-index: 9;
         top: 0;
@@ -456,6 +462,9 @@ footer a:hover {
         top: 50px;
         transform: translateX(-100%);
         background-color: #383A3A;
+    }
+    .commentsContainer {
+        height: 500px;
     }
     #humburger {
         background-color: #383A3A;
@@ -509,5 +518,37 @@ footer a:hover {
     #check:checked~.menu {
         opacity: 1;
         transform: translateX(0)
+    }
+    #location,
+    .social,
+    .footerRight,
+    .contacts {
+        float: none;
+    }
+    .social img {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    footer {
+        text-align: center;
+    }
+    .menuRight {
+        display: none;
+    }
+    .social {
+        text-align: center;
+    }
+    .footerRight,
+    .contacts,
+    #location {
+        float: none;
+    }
+    .commentsContainer {
+        height: 400px;
+    }
+    .comment {
+        width: auto;
     }
 }
