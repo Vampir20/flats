@@ -2,6 +2,7 @@ let dist = 0
 let slider = document.getElementById("slider")
 let right = document.getElementById("commentRight")
 let left = document.getElementById("commentLeft")
+let callMe = document.getElementsByClassName("modal")[0]
 
 
 function sliderRight() {
@@ -53,4 +54,10 @@ left.onclick = function() {
     setTimeout(function() {
         previousPair.classList.add("activePair");
     }, 500)
+}
+
+function show() {
+    console.log("111")
+    callMe.style.display = "block";
+    callMe.style.opacity = "1";
 }

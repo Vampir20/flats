@@ -7,13 +7,65 @@ body {
     background-color: rgb(235, 235, 235);
 }
 
+form {
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .modal {
+    transition: 0.5s;
+    opacity: 0;
+    display: none;
     height: 100%;
     width: 100%;
     z-index: 1000;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.500);
     backdrop-filter: blur(2px);
+}
+
+.modal input {
+    box-sizing: border-box;
+    border: none;
+    padding: 0 5px;
+    border-bottom: 1px solid #aaa;
+    line-height: 40px;
+    outline: none;
+    width: 100%;
+    display: block;
+}
+
+.modal h2 {
+    color: #999999;
+    font-size: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    transition: 0.5s;
+}
+
+form:hover h2 {
+    color: #222222;
+}
+
+.modal button {
+    transition: 0.5s;
+    color: white;
+    line-height: 40px;
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: rgb(153, 150, 150);
+    border-radius: 20px;
+}
+
+.modal button:hover {
+    background-color: rgb(235, 226, 226);
+    color: black;
 }
 
 .container {
