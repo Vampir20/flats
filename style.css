@@ -228,6 +228,7 @@ form:hover h2 {
 }
 
 .slide {
+    font-family: 'Titillium Web', sans-serif;
     white-space: normal;
     width: 100%;
     display: inline-block;
@@ -388,7 +389,8 @@ a {
 }
 
 .commentsContainer {
-    height: 184px;
+    font-family: 'Titillium Web', sans-serif;
+    height: 240px;
 }
 
 .comment {
@@ -412,7 +414,14 @@ a {
     object-fit: cover;
 }
 
+.comment p {
+    overflow-y: scroll;
+    height: 75px;
+    line-height: 25px;
+}
+
 footer {
+    font-family: 'Titillium Web', sans-serif;
     padding: 20px 0;
     background-color: #383A3A;
     overflow: hidden;
