@@ -1,13 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="flat.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Rock+3D&family=Titillium+Web:wght@200;700&display=swap" rel="stylesheet">
     <title>Document</title>
+
+    <style>
+        iframe {
+            width: 100%;
+            float: right;
+        }
+    </style>
 </head>
+
 <body>
-    <img src="flat.jpg" class="img">
+    <div class="upBar">
+        <div class="container">
+            <input type="checkbox" id="check">
+            <label for="check" id="humburger">
+                <span></span>
+            </label>
+            <a class="logo" href="index.html">
+                <img src="house.png" class="house">
+            </a>
+            <ul class="menu">
+                <li>
+                    <a href="#">Flats</a>
+                    <nav class="nav">
+                        <a href="flat.html">room</a>
+                        <a href="flats.html">flat</a>
+                        <a href="house.html">house</a>
+                    </nav>
+                </li>
+                <li>
+                    <a href="#">Feedback</a>
+                </li>
+                <li>
+                    <a href="about.html">about</a>
+                </li>
+            </ul>
+            <div class="menuRight">
+                <a class="phoneButton" href="#">
+                    <img src="phone.png" alt="" class="phone">
+                    <p class=" number">+4915227542724</p>
+                </a>
+                <button class="call" onclick="show()">CALL ME </button>
+            </div>
+
+
+        </div>
+
+    </div>
+    <main>
+        <h2>Nekrasov Street, 21</h2>
+        <div class="container">
+            <div class="container-left">
+                <img id="flat0" src="flatvilla.jpg" alt="villa">
+                <img id="flat1" src="flatvillathree.jpg" alt="villa">
+                <img id="flat2" src="flatvillafive.jpg" alt="villa">
+                <img id="flat3" src="flatvillafour.jpg" alt="villa">
+                <img id="flat4" src="flatvillatwo.jpg" alt="villa">
+            </div>
+
+            <div class="container-right">
+                <div class="container-upper">
+                    <p class="night">15000$ / night </p>
+                    <button class="book"><i>book</i></button>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam, nobis sunt! Placeat modi rerum similique soluta voluptates consectetur non quas cupiditate ipsum minus alias magnam quam, voluptatibus dolor quaerat.<br><br>Lorem
+                        ipsum dolor, sit amet consectetur adipisicing elit. Voluptates debitis commodi praesentium nisi ut blanditiis culpa, optio error, veritatis excepturi sint reprehenderit. Officiis, architecto sit ad aliquid fugiat unde nesciunt.</p>
+
+                    <ul>
+                        <li class="first-li">
+                            <img src="user.png" alt="">
+                            <p>10 guests or less</p>
+                            <img src="bed.png" alt="">
+                            <p>2 beds</p><br>
+                        </li>
+                        <li class="second-li">
+                            <img src="markIcon.svg" alt="">
+                            <p>wifi, 5G, roaming, pc, tv, playstation 5 sound box 30 pieces, bmw bicycle, autopark(ferrari f90, bmw concept vision, mercedes amg gtr pro, amg gt 63, mclaren)</p>
+                        </li>
+                        <li class="third-li">
+                            <img src="markIcon.svg" alt="">
+                            <p>feel home</p>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.813981512509!2d37.28284325592806!3d55.72716703196482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9b1e1890adca3137!2zNTXCsDQzJzM3LjgiTiAzN8KwMTcnMDAuOSJF!5e0!3m2!1sru!2sde!4v1653404051055!5m2!1sru!2sde"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <a class="logo" href="/">
+                <img src="house.png" class="house">
+            </a>
+            <ul class="menu">
+                <li>
+                    <a href="#">Flats</a>
+                </li>
+                <li>
+                    <a href="#">Feedback</a>
+                </li>
+                <li>
+                    <a href="#">about</a>
+                </li>
+            </ul>
+            <div class="footerRight ">
+                <a href="#" id="location">
+                    <img src="location.png" alt="" class="locationImg">
+                    <p class="locationText">ДЗФС 26</p>
+                </a>
+                <div class="contacts">
+                    <a class="phoneButton" href="#">
+                        <img src="phone.png" alt="" class="phone">
+                        <p class=" number">+4915227542724</p>
+
+                    </a>
+
+                    <div class="social">
+                        <a href="#">
+                            <img src="instagram.png">
+
+                        </a>
+
+                        <a href="#">
+                            <img src="telegram.png">
+
+                        </a>
+
+                        <a href="#">
+                            <img src="mail.png">
+
+                        </a>
+
+                        <a href="#">
+                            <img src="facebook.png">
+
+                        </a>
+
+                        <a href="#">
+                            <img src="vk.png" class="vk">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let galerie = document.querySelector(".container-left")
+        let info = document.querySelector(".container-right")
+        let map = document.getElementById("map")
+
+        map.style.height = galerie.offsetHeight - info.offsetHeight + "px"
+        console.log(galerie, info, map);
+    </script>
 </body>
+
 </html>

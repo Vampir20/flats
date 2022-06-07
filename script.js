@@ -3,61 +3,38 @@ let slider = document.getElementById("slider")
 let right = document.getElementById("commentRight")
 let left = document.getElementById("commentLeft")
 let callMe = document.getElementsByClassName("modal")[0]
+let slides = document.querySelector(".sliderContainer")
 
-
-function sliderRight() {
-    dist = dist + 100
-    console.log(dist)
-    if (dist == 300) {
+function runSlider() {
+    if (dist === slider.children.length) {
         dist = 0
     }
-    slider.style.transform = "translateX(-" + dist + "%)"
+
+    let sliderParent = slider.parentElement.clientWidth
+
+    slider.style.transform = `translateX(-${sliderParent * dist}px)`
+    dist++
 }
 
-function sliderLeft() {
-    dist = dist - 100
-    console.log(dist)
-    if (dist == -100) {
-        dist = 200
-    }
-    slider.style.transform = "translateX(-" + dist + "%)"
-}
+setInterval(() => {
+    runSlider()
+}, 2000)
 
 function takeAndGive() {
 
 }
-right.onclick = function() {
-    let activePair = document.getElementsByClassName("activePair")[0]
-    let nextPair;
-
-    if (activePair.nextElementSibling) {
-        nextPair = activePair.nextElementSibling;
-    } else {
-        nextPair = document.getElementsByClassName("pair")[0]
-    }
-
-    activePair.classList.remove("activePair");
-    setTimeout(function() {
-        nextPair.classList.add("activePair");
-    }, 500)
-}
-
-left.onclick = function() {
-    let activePair = document.getElementsByClassName("activePair")[0]
-    let previousPair;
-    activePair.classList.remove("activePair");
-    if (activePair.previousElementSibling) {
-        previousPair = activePair.previousElementSibling;
-    } else {
-        previousPair = document.getElementsByClassName("pair")[2]
-    }
-    setTimeout(function() {
-        previousPair.classList.add("activePair");
-    }, 500)
-}
 
 function show() {
-    console.log("111")
     callMe.style.display = "block";
     callMe.style.opacity = "1";
+}
+
+callMe.onclick = function() {
+    callMe.style.opacity = "0"
+    callMe.style.display = "none"
+
+}
+
+callMe.children[0].onclick = function(event) {
+    event.stopPropagation(); //остановить распростронение
 }
