@@ -20,9 +20,7 @@ setInterval(() => {
     runSlider()
 }, 2000)
 
-function takeAndGive() {
-
-}
+function takeAndGive() {}
 
 function show() {
     callMe.style.display = "block";

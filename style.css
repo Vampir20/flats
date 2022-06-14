@@ -376,6 +376,8 @@ a {
 }
 
 .pair {
+    /* тег не чувствует мышку можно кликать сквощь тег */
+    pointer-events: none;
     text-align: center;
     position: absolute;
     opacity: 0;
@@ -384,6 +386,7 @@ a {
 }
 
 .activePair {
+    pointer-events: all;
     opacity: 1;
     transform: scale(1);
 }
@@ -421,6 +424,7 @@ a {
 }
 
 footer {
+    width: 100%;
     font-family: 'Titillium Web', sans-serif;
     padding: 20px 0;
     background-color: #383A3A;
